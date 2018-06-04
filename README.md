@@ -23,7 +23,7 @@ my checklist for creating new ubuntu 16.04 server
 
 ## Nginx
 1. `sudo apt-get install nginx`
-1. `sudo ufw allow 'Nginx Full`
+1. `sudo ufw allow 'Nginx Full'`
 
 ## MariaDB
 1. Visit https://downloads.mariadb.org/mariadb/repositories/#mirror=kisiek for actual repository instructions
@@ -72,6 +72,9 @@ my checklist for creating new ubuntu 16.04 server
 1. `curl -sO http://gordalina.github.io/cachetool/downloads/cachetool.phar`
 1. `chmod +x cachetool.phar`
 1. `sudo mv cachetool.phar /usr/local/bin/phpcachetool`
+1. Create config file under `/etc/cachetool.yml`
+    1. `adapter: fastcgi`
+    1. `fastcgi: /run/php/php7.2-fpm.sock`
 
 # Configs
 ## PHP config
