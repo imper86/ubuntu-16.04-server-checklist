@@ -113,6 +113,8 @@ my checklist for creating new ubuntu 16.04 server
 ## Nginx config
 1. `sudo nano /etc/nginx/nginx.conf`
     1. `user imper`
+    1. `listen.owner = imper`
+    1. `listen.group = imper`
 
 ## MariaDB config
 1. `sudo nano /etc/mysql/my.cnf`
