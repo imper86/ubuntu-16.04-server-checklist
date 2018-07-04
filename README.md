@@ -75,6 +75,12 @@ my checklist for creating new ubuntu 16.04 server
 1. Create config file under `/etc/cachetool.yml`
     1. `adapter: fastcgi`
     1. `fastcgi: /run/php/php7.2-fpm.sock`
+    
+## RabbitMQ
+1. `wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb`
+1. `sudo dpkg -i erlang-solutions_1.0_all.deb`
+1. `curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash`
+1. `sudo apt update` & `sudo apt install rabbitmq-server`
 
 # Configs
 ## PHP config
