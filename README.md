@@ -77,10 +77,20 @@ my checklist for creating new ubuntu 16.04 server
     1. `fastcgi: /run/php/php7.2-fpm.sock`
     
 ## RabbitMQ
-1. `wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb`
-1. `sudo dpkg -i erlang-solutions_1.0_all.deb`
-1. `curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash`
-1. `sudo apt update` & `sudo apt install rabbitmq-server`
+1. `cd ~`
+1. `wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_20.1-1~ubuntu~xenial_amd64.deb`
+1. `sudo dpkg -i esl-erlang_20.1-1\~ubuntu\~xenial_amd64.deb`
+1. Verify erlang version with `erl` double ctrl+c to exit
+1. `echo "deb https://dl.bintray.com/rabbitmq/debian xenial main" | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list`
+1. `wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -`
+1. `sudo apt-get update`
+1. `sudo apt-get install rabbitmq-server`
+1. `sudo systemctl start rabbitmq-server.service`
+1. `sudo systemctl enable rabbitmq-server.service`
+1. `sudo rabbitmqctl status`
+1. `sudo rabbitmqctl add_user admin password`
+1. `sudo rabbitmqctl set_user_tags admin administrator`
+1. `sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"`
 
 # Configs
 ## PHP config
