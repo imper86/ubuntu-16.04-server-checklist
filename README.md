@@ -7,7 +7,8 @@ my checklist for creating new ubuntu 16.04 server
 1. Add root privileges: `usermod -aG sudo imper` and logout
 1. Copy your public key from your machine: `ssh-copy-id imper@serverhost`
 1. Login as imper
-1. Add autocompletion for bash with: `sudo apt-get update` `sudo apt-get install bash-completion` and logout/login again
+1. Add autocompletion for bash with: `sudo apt update` `sudo apt install bash-completion` and logout/login again
+1. Add software-properties-common: `sudo apt install software-properties-common`
 1. Install nano `sudo apt-get install nano`
 1. Edit sshd config: `sudo nano /etc/ssh/sshd_config` and set `PasswordAuthentication no`
 1. Reload sshd: `sudo systemctl reload sshd`
@@ -22,7 +23,9 @@ my checklist for creating new ubuntu 16.04 server
 1. Install NTP for time synchronization `sudo apt-get install ntp`
 
 ## Nginx
-1. `sudo apt-get install nginx`
+1. `sudo add-apt-repository ppa:ondrej/nginx`
+1. `sudo apt update`
+1. `sudo apt install nginx`
 1. `sudo ufw allow 'Nginx Full'`
 
 ## MariaDB
