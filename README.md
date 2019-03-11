@@ -100,6 +100,7 @@ my checklist for creating new ubuntu 16.04 server
 1. redis
 1. supervisord
 1. wkhtmltopdf
+1. elasticsearch
 
 # Configs
 ## PHP config
