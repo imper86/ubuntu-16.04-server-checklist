@@ -95,6 +95,12 @@ my checklist for creating new ubuntu 16.04 server
 1. `sudo rabbitmqctl set_user_tags admin administrator`
 1. `sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"`
 
+## Others
+1. git
+1. redis
+1. supervisord
+1. wkhtmltopdf
+
 # Configs
 ## PHP config
 1. `sudo nano /etc/php/7.2/fpm/php.ini`
